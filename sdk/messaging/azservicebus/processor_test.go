@@ -37,7 +37,7 @@ func TestProcessorReceiveWithDefaults(t *testing.T) {
 		require.NoError(t, err)
 	}()
 
-	processor, err := newProcessorForQueue(serviceBusClient, queueName, nil)
+	processor, err := NewProcessorForQueue(serviceBusClient, queueName, nil)
 	require.NoError(t, err)
 
 	defer processor.Close(context.Background()) // multiple close is fine
@@ -114,10 +114,10 @@ func TestProcessorReceiveWith100MessagesWithMaxConcurrency(t *testing.T) {
 		require.NoError(t, sender.SendMessageBatch(context.Background(), batch))
 	}()
 
-	processor, err := newProcessorForQueue(
+	processor, err := NewProcessorForQueue(
 		serviceBusClient,
 		queueName,
-		&processorOptions{
+		&ProcessorOptions{
 			MaxConcurrentCalls: 20,
 		})
 
@@ -163,7 +163,7 @@ func TestProcessorReceiveWith100MessagesWithMaxConcurrency(t *testing.T) {
 }
 
 func TestProcessorUnitTests(t *testing.T) {
-	p := &processor{}
+	p := &Processor{}
 	e := &entity{}
 
 	require.NoError(t, applyProcessorOptions(p, e, nil))
@@ -171,12 +171,12 @@ func TestProcessorUnitTests(t *testing.T) {
 	require.EqualValues(t, 1, p.maxConcurrentCalls)
 	require.EqualValues(t, ReceiveModePeekLock, p.receiveMode)
 
-	p = &processor{}
+	p = &Processor{}
 	e = &entity{
 		Queue: "queue",
 	}
 
-	require.NoError(t, applyProcessorOptions(p, e, &processorOptions{
+	require.NoError(t, applyProcessorOptions(p, e, &ProcessorOptions{
 		ReceiveMode:         ReceiveModeReceiveAndDelete,
 		SubQueue:            SubQueueDeadLetter,
 		DisableAutoComplete: true,

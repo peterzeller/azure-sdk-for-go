@@ -140,7 +140,7 @@ func TestNewClientUnitTests(t *testing.T) {
 		require.EqualValues(t, 1, ns.AMQPLinks.Closed)
 
 		client, ns = setupClient()
-		_, err = newProcessorForQueue(client, "hello", nil)
+		_, err = NewProcessorForQueue(client, "hello", nil)
 
 		require.NoError(t, err)
 		require.EqualValues(t, 1, len(client.links))
@@ -150,7 +150,7 @@ func TestNewClientUnitTests(t *testing.T) {
 		require.EqualValues(t, 1, ns.AMQPLinks.Closed)
 
 		client, ns = setupClient()
-		_, err = newProcessorForSubscription(client, "hello", "world", nil)
+		_, err = NewProcessorForSubscription(client, "hello", "world", nil)
 
 		require.NoError(t, err)
 		require.EqualValues(t, 1, len(client.links))
