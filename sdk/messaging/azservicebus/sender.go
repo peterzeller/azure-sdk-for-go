@@ -7,8 +7,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
 	"github.com/Azure/go-amqp"
 	"github.com/devigned/tab"
 )

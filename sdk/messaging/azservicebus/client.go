@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 
 	"github.com/Azure/azure-sdk-for-go/sdk/azcore"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal"
 	"github.com/devigned/tab"
 )
 

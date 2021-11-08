@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/Azure/azure-amqp-common-go/v3/auth"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal/atom"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal/utils"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal/atom"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal/utils"
 )
 
 // SubscriptionProperties represents the static properties of the subscription.

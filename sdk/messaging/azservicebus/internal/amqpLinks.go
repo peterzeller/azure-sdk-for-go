@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
 	"github.com/devigned/tab"
 )
 

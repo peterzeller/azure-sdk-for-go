@@ -5,7 +5,7 @@ package azservicebus_test
 
 import (
 	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus"
 )
 
 func ExampleNewClient() {

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus"
 )
 
 func ExampleClient_NewSender() {

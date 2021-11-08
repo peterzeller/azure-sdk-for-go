@@ -13,7 +13,7 @@ import (
 	common "github.com/Azure/azure-amqp-common-go/v3"
 	"github.com/Azure/azure-amqp-common-go/v3/rpc"
 	"github.com/Azure/azure-amqp-common-go/v3/uuid"
-	"github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
+	"github.com/peterzeller/azure-sdk-for-go/sdk/messaging/azservicebus/internal/tracing"
 	"github.com/Azure/go-amqp"
 	"github.com/devigned/tab"
 )
